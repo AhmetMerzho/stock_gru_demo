@@ -2,6 +2,8 @@
   const datasetSelect = document.getElementById('dataset-select');
   const featureSelect = document.getElementById('feature-select');
   const runButton = document.getElementById('run-btn');
+  const uploadButton = document.getElementById('upload-btn');
+  const uploadInput = document.getElementById('dataset-upload');
   const metricLayout = document.getElementById('metric-layout');
   const emptyState = document.getElementById('empty-state');
   const chartsContainer = document.getElementById('charts');
@@ -210,7 +212,7 @@
     featureDescription.textContent = metadata?.description ?? metadata?.notes ?? 'Select a dataset to view the engineered features.';
   }
 
-  async function populateDatasets() {
+  async function populateDatasets(selectedId = state.datasetId) {
     try {
       const datasets = await DataLoader.listDatasets();
       datasetSelect.innerHTML = '';
@@ -226,6 +228,10 @@
       });
 
       datasetSelect.disabled = false;
+
+      if (selectedId && datasetSelect.querySelector(`option[value="${selectedId}"]`)) {
+        datasetSelect.value = selectedId;
+      }
     } catch (error) {
       datasetSelect.innerHTML = '';
       datasetSelect.appendChild(new Option('Failed to load datasets', ''));
@@ -282,6 +288,25 @@
     }
   }
 
+  async function handleDatasetUpload(event) {
+    const file = event.target.files?.[0];
+    if (!file) return;
+
+    try {
+      const text = await file.text();
+      const payload = JSON.parse(text);
+      const datasetName = file.name.replace(/\.[^.]+$/, '');
+      const entry = DataLoader.registerCustomDataset(datasetName, payload);
+      await populateDatasets(entry.id);
+      datasetSelect.dispatchEvent(new Event('change', { bubbles: true }));
+    } catch (error) {
+      console.error(error);
+      alert('Unable to load that dataset. Please confirm it is a valid JSON export.');
+    } finally {
+      event.target.value = '';
+    }
+  }
+
   datasetSelect.addEventListener('change', (event) => {
     const option = event.target.selectedOptions[0];
     state.datasetId = option?.value || null;
@@ -316,6 +341,14 @@
       highlightTableRows(stock.symbol);
     }
   });
+
+  if (uploadButton && uploadInput) {
+    uploadButton.addEventListener('click', () => {
+      uploadInput.click();
+    });
+
+    uploadInput.addEventListener('change', handleDatasetUpload);
+  }
 
   populateDatasets();
 })();

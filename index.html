@@ -87,6 +87,38 @@
       gap: 0.75rem;
     }
 
+    .control-group.actions {
+      align-self: stretch;
+    }
+
+    .button-stack {
+      display: grid;
+      gap: 0.75rem;
+    }
+
+    .button-stack button {
+      width: 100%;
+    }
+
+    button.secondary {
+      background: transparent;
+      border: 1px dashed rgba(37, 99, 235, 0.35);
+      color: var(--accent);
+    }
+
+    button.secondary:hover {
+      background: rgba(37, 99, 235, 0.08);
+      color: var(--accent-dark);
+      box-shadow: none;
+      transform: none;
+    }
+
+    .upload-hint {
+      font-size: 0.8rem;
+      color: var(--muted);
+      text-align: center;
+    }
+
     label {
       font-weight: 600;
       font-size: 0.95rem;
@@ -258,18 +290,15 @@
     @media (min-width: 768px) {
       .controls {
         grid-template-columns: repeat(3, minmax(0, 1fr));
-        align-items: end;
+        align-items: stretch;
       }
 
-      .control-group:last-child {
-        align-self: stretch;
-        display: flex;
-        justify-content: flex-end;
-      }
-
-      button {
-        min-width: 160px;
+      .control-group.actions .button-stack {
         height: 100%;
+      }
+
+      .control-group.actions button {
+        min-height: 48px;
       }
     }
   </style>
@@ -299,13 +328,18 @@
             <option value="" disabled selected>Select a dataset first</option>
           </select>
         </div>
-        <div class="control-group">
-          <button id="run-btn" type="button" disabled>Run Prediction</button>
+        <div class="control-group actions">
+          <div class="button-stack">
+            <button id="run-btn" type="button" disabled>Run Prediction</button>
+            <button id="upload-btn" type="button" class="secondary">Upload Dataset</button>
+            <input id="dataset-upload" type="file" accept="application/json" hidden aria-hidden="true" />
+            <small class="upload-hint">Load a JSON export to evaluate it in the browser.</small>
+          </div>
         </div>
       </div>
       <p id="configuration-help" style="margin-top:1rem; color: var(--muted); font-size:0.9rem;">
-        Each dataset bundles normalized price features and a pre-trained GRU checkpoint. Select a dataset to enable the
-        feature scope and run an evaluation.
+        Each dataset bundles normalized price features and a pre-trained GRU checkpoint. Select a built-in dataset or
+        upload your own JSON file to enable the feature scope and run an evaluation.
       </p>
     </section>
 

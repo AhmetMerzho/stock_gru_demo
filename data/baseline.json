@@ -1,0 +1,119 @@
+{
+  "metadata": {
+    "label": "Baseline Tech & Retail Mix",
+    "description": "Min-max normalised open/close features over a 12 step window.",
+    "featureWindow": 12,
+    "features": ["Open", "Close"],
+    "notes": "Model trained with dropout 0.2 and SGD optimizer (lr=1e-3)."
+  },
+  "stocks": [
+    {
+      "symbol": "ICE",
+      "company": "Intercontinental Exchange",
+      "predictions": [
+        {"date": "2024-08-01", "predicted": 1, "actual": 1},
+        {"date": "2024-08-02", "predicted": 1, "actual": 1},
+        {"date": "2024-08-05", "predicted": 0, "actual": 0},
+        {"date": "2024-08-06", "predicted": 1, "actual": 1},
+        {"date": "2024-08-07", "predicted": 1, "actual": 1},
+        {"date": "2024-08-08", "predicted": 0, "actual": 0},
+        {"date": "2024-08-09", "predicted": 1, "actual": 1},
+        {"date": "2024-08-12", "predicted": 0, "actual": 0},
+        {"date": "2024-08-13", "predicted": 1, "actual": 1},
+        {"date": "2024-08-14", "predicted": 1, "actual": 0},
+        {"date": "2024-08-15", "predicted": 1, "actual": 1},
+        {"date": "2024-08-16", "predicted": 0, "actual": 0}
+      ]
+    },
+    {
+      "symbol": "ALLE",
+      "company": "Allegion",
+      "predictions": [
+        {"date": "2024-08-01", "predicted": 0, "actual": 0},
+        {"date": "2024-08-02", "predicted": 1, "actual": 0},
+        {"date": "2024-08-05", "predicted": 1, "actual": 1},
+        {"date": "2024-08-06", "predicted": 0, "actual": 1},
+        {"date": "2024-08-07", "predicted": 0, "actual": 0},
+        {"date": "2024-08-08", "predicted": 1, "actual": 1},
+        {"date": "2024-08-09", "predicted": 1, "actual": 1},
+        {"date": "2024-08-12", "predicted": 0, "actual": 0},
+        {"date": "2024-08-13", "predicted": 0, "actual": 1},
+        {"date": "2024-08-14", "predicted": 1, "actual": 0},
+        {"date": "2024-08-15", "predicted": 0, "actual": 0},
+        {"date": "2024-08-16", "predicted": 1, "actual": 1}
+      ]
+    },
+    {
+      "symbol": "CSGP",
+      "company": "CoStar Group",
+      "predictions": [
+        {"date": "2024-08-01", "predicted": 1, "actual": 1},
+        {"date": "2024-08-02", "predicted": 1, "actual": 0},
+        {"date": "2024-08-05", "predicted": 0, "actual": 0},
+        {"date": "2024-08-06", "predicted": 0, "actual": 0},
+        {"date": "2024-08-07", "predicted": 1, "actual": 1},
+        {"date": "2024-08-08", "predicted": 0, "actual": 1},
+        {"date": "2024-08-09", "predicted": 1, "actual": 1},
+        {"date": "2024-08-12", "predicted": 0, "actual": 0},
+        {"date": "2024-08-13", "predicted": 1, "actual": 0},
+        {"date": "2024-08-14", "predicted": 1, "actual": 1},
+        {"date": "2024-08-15", "predicted": 0, "actual": 0},
+        {"date": "2024-08-16", "predicted": 0, "actual": 1}
+      ]
+    },
+    {
+      "symbol": "ORLY",
+      "company": "O'Reilly Automotive",
+      "predictions": [
+        {"date": "2024-08-01", "predicted": 0, "actual": 0},
+        {"date": "2024-08-02", "predicted": 0, "actual": 0},
+        {"date": "2024-08-05", "predicted": 1, "actual": 1},
+        {"date": "2024-08-06", "predicted": 1, "actual": 1},
+        {"date": "2024-08-07", "predicted": 1, "actual": 1},
+        {"date": "2024-08-08", "predicted": 0, "actual": 0},
+        {"date": "2024-08-09", "predicted": 0, "actual": 0},
+        {"date": "2024-08-12", "predicted": 1, "actual": 1},
+        {"date": "2024-08-13", "predicted": 1, "actual": 1},
+        {"date": "2024-08-14", "predicted": 0, "actual": 0},
+        {"date": "2024-08-15", "predicted": 1, "actual": 1},
+        {"date": "2024-08-16", "predicted": 0, "actual": 1}
+      ]
+    },
+    {
+      "symbol": "SPGI",
+      "company": "S&P Global",
+      "predictions": [
+        {"date": "2024-08-01", "predicted": 1, "actual": 0},
+        {"date": "2024-08-02", "predicted": 0, "actual": 0},
+        {"date": "2024-08-05", "predicted": 0, "actual": 0},
+        {"date": "2024-08-06", "predicted": 1, "actual": 1},
+        {"date": "2024-08-07", "predicted": 1, "actual": 1},
+        {"date": "2024-08-08", "predicted": 0, "actual": 0},
+        {"date": "2024-08-09", "predicted": 1, "actual": 0},
+        {"date": "2024-08-12", "predicted": 1, "actual": 1},
+        {"date": "2024-08-13", "predicted": 0, "actual": 1},
+        {"date": "2024-08-14", "predicted": 1, "actual": 1},
+        {"date": "2024-08-15", "predicted": 0, "actual": 0},
+        {"date": "2024-08-16", "predicted": 1, "actual": 1}
+      ]
+    },
+    {
+      "symbol": "ODFL",
+      "company": "Old Dominion Freight Line",
+      "predictions": [
+        {"date": "2024-08-01", "predicted": 0, "actual": 0},
+        {"date": "2024-08-02", "predicted": 1, "actual": 1},
+        {"date": "2024-08-05", "predicted": 1, "actual": 0},
+        {"date": "2024-08-06", "predicted": 0, "actual": 0},
+        {"date": "2024-08-07", "predicted": 1, "actual": 1},
+        {"date": "2024-08-08", "predicted": 0, "actual": 0},
+        {"date": "2024-08-09", "predicted": 0, "actual": 1},
+        {"date": "2024-08-12", "predicted": 1, "actual": 1},
+        {"date": "2024-08-13", "predicted": 1, "actual": 0},
+        {"date": "2024-08-14", "predicted": 0, "actual": 0},
+        {"date": "2024-08-15", "predicted": 1, "actual": 1},
+        {"date": "2024-08-16", "predicted": 0, "actual": 0}
+      ]
+    }
+  ]
+}

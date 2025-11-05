@@ -1,0 +1,20 @@
+{
+  "datasets": [
+    {
+      "id": "baseline",
+      "name": "Baseline Tech & Retail Mix",
+      "description": "Open & Close with 12-step lookback",
+      "featureWindow": 12,
+      "features": ["Open", "Close"],
+      "notes": "Only price based inputs with min-max normalisation."
+    },
+    {
+      "id": "extended",
+      "name": "Extended Momentum Basket",
+      "description": "Open, Close, High, Low with 18-step lookback",
+      "featureWindow": 18,
+      "features": ["Open", "Close", "High", "Low"],
+      "notes": "Adds high/low range features for better volatility capture."
+    }
+  ]
+}

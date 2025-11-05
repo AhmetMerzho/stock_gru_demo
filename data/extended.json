@@ -1,0 +1,119 @@
+{
+  "metadata": {
+    "label": "Extended Momentum Basket",
+    "description": "Expanded feature stack (open, close, high, low) with engineered momentum ratios.",
+    "featureWindow": 18,
+    "features": ["Open", "Close", "High", "Low"],
+    "notes": "Trained with cosine annealing schedule and 0.3 dropout."
+  },
+  "stocks": [
+    {
+      "symbol": "ADBE",
+      "company": "Adobe Inc.",
+      "predictions": [
+        {"date": "2024-09-02", "predicted": 1, "actual": 1},
+        {"date": "2024-09-03", "predicted": 1, "actual": 0},
+        {"date": "2024-09-04", "predicted": 1, "actual": 1},
+        {"date": "2024-09-05", "predicted": 0, "actual": 0},
+        {"date": "2024-09-06", "predicted": 1, "actual": 1},
+        {"date": "2024-09-09", "predicted": 0, "actual": 0},
+        {"date": "2024-09-10", "predicted": 1, "actual": 1},
+        {"date": "2024-09-11", "predicted": 1, "actual": 1},
+        {"date": "2024-09-12", "predicted": 0, "actual": 0},
+        {"date": "2024-09-13", "predicted": 1, "actual": 1},
+        {"date": "2024-09-16", "predicted": 0, "actual": 0},
+        {"date": "2024-09-17", "predicted": 0, "actual": 1}
+      ]
+    },
+    {
+      "symbol": "CRM",
+      "company": "Salesforce",
+      "predictions": [
+        {"date": "2024-09-02", "predicted": 0, "actual": 0},
+        {"date": "2024-09-03", "predicted": 1, "actual": 1},
+        {"date": "2024-09-04", "predicted": 0, "actual": 0},
+        {"date": "2024-09-05", "predicted": 0, "actual": 1},
+        {"date": "2024-09-06", "predicted": 1, "actual": 1},
+        {"date": "2024-09-09", "predicted": 1, "actual": 1},
+        {"date": "2024-09-10", "predicted": 0, "actual": 0},
+        {"date": "2024-09-11", "predicted": 1, "actual": 1},
+        {"date": "2024-09-12", "predicted": 0, "actual": 1},
+        {"date": "2024-09-13", "predicted": 0, "actual": 0},
+        {"date": "2024-09-16", "predicted": 1, "actual": 1},
+        {"date": "2024-09-17", "predicted": 1, "actual": 0}
+      ]
+    },
+    {
+      "symbol": "NFLX",
+      "company": "Netflix",
+      "predictions": [
+        {"date": "2024-09-02", "predicted": 1, "actual": 1},
+        {"date": "2024-09-03", "predicted": 1, "actual": 1},
+        {"date": "2024-09-04", "predicted": 1, "actual": 0},
+        {"date": "2024-09-05", "predicted": 0, "actual": 0},
+        {"date": "2024-09-06", "predicted": 1, "actual": 1},
+        {"date": "2024-09-09", "predicted": 0, "actual": 0},
+        {"date": "2024-09-10", "predicted": 1, "actual": 1},
+        {"date": "2024-09-11", "predicted": 0, "actual": 0},
+        {"date": "2024-09-12", "predicted": 1, "actual": 1},
+        {"date": "2024-09-13", "predicted": 0, "actual": 0},
+        {"date": "2024-09-16", "predicted": 1, "actual": 1},
+        {"date": "2024-09-17", "predicted": 1, "actual": 1}
+      ]
+    },
+    {
+      "symbol": "MSFT",
+      "company": "Microsoft",
+      "predictions": [
+        {"date": "2024-09-02", "predicted": 1, "actual": 1},
+        {"date": "2024-09-03", "predicted": 0, "actual": 0},
+        {"date": "2024-09-04", "predicted": 1, "actual": 1},
+        {"date": "2024-09-05", "predicted": 1, "actual": 1},
+        {"date": "2024-09-06", "predicted": 0, "actual": 0},
+        {"date": "2024-09-09", "predicted": 0, "actual": 0},
+        {"date": "2024-09-10", "predicted": 1, "actual": 1},
+        {"date": "2024-09-11", "predicted": 1, "actual": 1},
+        {"date": "2024-09-12", "predicted": 1, "actual": 0},
+        {"date": "2024-09-13", "predicted": 0, "actual": 0},
+        {"date": "2024-09-16", "predicted": 1, "actual": 1},
+        {"date": "2024-09-17", "predicted": 0, "actual": 0}
+      ]
+    },
+    {
+      "symbol": "SHOP",
+      "company": "Shopify",
+      "predictions": [
+        {"date": "2024-09-02", "predicted": 0, "actual": 1},
+        {"date": "2024-09-03", "predicted": 1, "actual": 1},
+        {"date": "2024-09-04", "predicted": 0, "actual": 0},
+        {"date": "2024-09-05", "predicted": 1, "actual": 1},
+        {"date": "2024-09-06", "predicted": 1, "actual": 1},
+        {"date": "2024-09-09", "predicted": 0, "actual": 0},
+        {"date": "2024-09-10", "predicted": 0, "actual": 0},
+        {"date": "2024-09-11", "predicted": 1, "actual": 1},
+        {"date": "2024-09-12", "predicted": 0, "actual": 0},
+        {"date": "2024-09-13", "predicted": 1, "actual": 1},
+        {"date": "2024-09-16", "predicted": 1, "actual": 0},
+        {"date": "2024-09-17", "predicted": 1, "actual": 1}
+      ]
+    },
+    {
+      "symbol": "WDAY",
+      "company": "Workday",
+      "predictions": [
+        {"date": "2024-09-02", "predicted": 1, "actual": 1},
+        {"date": "2024-09-03", "predicted": 0, "actual": 0},
+        {"date": "2024-09-04", "predicted": 1, "actual": 0},
+        {"date": "2024-09-05", "predicted": 0, "actual": 0},
+        {"date": "2024-09-06", "predicted": 1, "actual": 1},
+        {"date": "2024-09-09", "predicted": 1, "actual": 1},
+        {"date": "2024-09-10", "predicted": 0, "actual": 0},
+        {"date": "2024-09-11", "predicted": 1, "actual": 1},
+        {"date": "2024-09-12", "predicted": 1, "actual": 1},
+        {"date": "2024-09-13", "predicted": 0, "actual": 0},
+        {"date": "2024-09-16", "predicted": 1, "actual": 1},
+        {"date": "2024-09-17", "predicted": 0, "actual": 0}
+      ]
+    }
+  ]
+}

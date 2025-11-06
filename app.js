@@ -294,14 +294,29 @@
 
     try {
       const text = await file.text();
-      const payload = JSON.parse(text);
-      const datasetName = file.name.replace(/\.[^.]+$/, '');
-      const entry = DataLoader.registerCustomDataset(datasetName, payload);
+      const datasetName = file.name.replace(/\.[^.]+$/, '') || 'Custom dataset';
+
+      let entry = null;
+
+      try {
+        const payload = JSON.parse(text);
+        entry = DataLoader.registerCustomDataset(datasetName, payload);
+      } catch (jsonError) {
+        try {
+          const payload = DataLoader.parseCsvDataset(text, datasetName);
+          entry = DataLoader.registerCustomDataset(datasetName, payload);
+        } catch (csvError) {
+          console.error(jsonError);
+          console.error(csvError);
+          throw new Error('Unsupported file format. Please upload JSON or CSV exports.');
+        }
+      }
+
       await populateDatasets(entry.id);
       datasetSelect.dispatchEvent(new Event('change', { bubbles: true }));
     } catch (error) {
       console.error(error);
-      alert('Unable to load that dataset. Please confirm it is a valid JSON export.');
+      alert(error?.message || 'Unable to load that dataset. Please provide a valid JSON or CSV export.');
     } finally {
       event.target.value = '';
     }

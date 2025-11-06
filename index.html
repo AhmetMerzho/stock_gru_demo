@@ -332,14 +332,20 @@
           <div class="button-stack">
             <button id="run-btn" type="button" disabled>Run Prediction</button>
             <button id="upload-btn" type="button" class="secondary">Upload Dataset</button>
-            <input id="dataset-upload" type="file" accept="application/json" hidden aria-hidden="true" />
-            <small class="upload-hint">Load a JSON export to evaluate it in the browser.</small>
+            <input
+              id="dataset-upload"
+              type="file"
+              accept=".json,.csv,application/json,text/csv"
+              hidden
+              aria-hidden="true"
+            />
+            <small class="upload-hint">Load a JSON or CSV export to evaluate it in the browser.</small>
           </div>
         </div>
       </div>
       <p id="configuration-help" style="margin-top:1rem; color: var(--muted); font-size:0.9rem;">
         Each dataset bundles normalized price features and a pre-trained GRU checkpoint. Select a built-in dataset or
-        upload your own JSON file to enable the feature scope and run an evaluation.
+        upload your own JSON or CSV file to enable the feature scope and run an evaluation.
       </p>
     </section>
 
